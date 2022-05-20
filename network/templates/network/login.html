@@ -1,0 +1,24 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <div class="text-center LB" style="margin-top:70px; padding: 20px 70px;">
+        <div style="font-size: 37px; color: rgba(29,161,242,1.00);"><i class="mr-4 fab fa-twitter"></i></div>
+        <div class="login-title mb-3 mt-4"><strong style="color:rgba(29,161,242,1.00);">Log in to Network</strong></div>
+        {% if message %}
+            <div style="color:white;">{{ message }}</div>
+        {% endif %}
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group text-left login-form-group">
+                <input autofocus class="form-control login-area BB" type="text" name="username" placeholder="Username" id="login-username">
+            </div>
+            <div class="form-group text-left login-form-group" >
+                <input class="form-control login-area BB" type="password" name="password" placeholder="Password" id="login-password">
+            </div>
+            <input style="width: 100%; height: 45px" class="btn login-btn" type="submit" value="Login">
+        </form>
+        <div class="mt-4  white">
+            Don't have an account? <a style="color: rgba(29,161,242,1.00);" href="{% url 'register' %}">Register here.</a>
+        </div>
+    </div>
+{% endblock %}

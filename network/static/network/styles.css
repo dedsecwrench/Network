@@ -1,0 +1,410 @@
+/* body */
+body {
+    overscroll-behavior-y: none;
+    background-color: #1a1a1d;
+}
+.body {
+    border-right: 1px solid #e2e2e2;
+    border-left: 1px solid #e2e2e2;
+    background-color: #F0F2F5;
+}
+/* SIDEBAR */
+.sidebar {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+}
+.sidebar-sticky {
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 10px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* navbar-link */
+.nav-link {
+    font-size: 19px;
+    font-weight: bolder;
+    color: white;
+    transition-duration: 0.25s;
+    border-radius: 999px;
+    padding-right: 20px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.bottom-user-info {
+    font-size: 19px;
+    font-weight: bolder;
+    padding-left: 20px;
+}
+
+/* selected active buttons - ALLPOST,FOLLOWING,PROFILE */
+.active {
+    color: rgba(29,161,242,1.00);
+}
+/* NAVBAR BUTTON HOVER - ALLPOSTS,PROFILE,FOLLOWING */
+.nav-link:hover {
+    color: rgba(29,161,242,1.00);
+    background-color: rgba(29,161, 242, 0.1);
+}
+
+@media (min-width: 768px) {
+    .col-md-2 {
+        -ms-flex: 0 0 21.5%;
+        flex: 0 0 21.5%;
+        max-width: 21.5%;
+    }
+}
+/* TOP NAV BAR TITLE */
+.top-nav {
+    background-color: white;
+    border-bottom: 1px solid #e2e2e2;
+}
+/* NAVBAR - ALLPOSTS,PROFILE,FOLLOWING */
+.navbar-brand {
+    font-size: 19px;
+    font-weight: bolder;
+    color: white;
+}
+.navbar-brand:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 576px) {
+    .col-sm-2 {
+        -ms-flex: 0 0 13%;
+        flex: 0 0 13%;
+        max-width: 13%;
+    }
+}
+
+/* creating post */
+#postContent {
+    outline: 0;
+    background-color: #1a1a1d;
+    color: #cfcfcf;
+    border: none;
+    font-size: 25px;
+    resize: none;
+}
+#postContent::placeholder{
+    color: #cfcfcf;
+    font-family: Yaldevi;
+    font-size: 25px;
+}
+#postContent:focus {
+    outline: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* post button */
+.post-submit {
+    float: right;
+    width:130px;
+    font-weight: bolder;
+    background-color: rgba(29,161,242,1.00);
+    border-color: transparent;
+    border-radius: 999px;
+}
+
+.no-hover-underline:hover {
+    text-decoration: none;
+}
+
+a.card-title {
+  text-decoration: none;
+  font-size:20px;
+  color:rgba(29,161,242,1.00);
+}
+a.card-title:hover{
+  transition: all 400ms ease;
+  padding:5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color:white;
+  background-color: rgba(29,161,242,1.00);
+ border:1px solid rgba(29,161,242,1.00);
+ border-radius: 200px;
+}
+
+.post-date {
+    color: #8d9498;
+}
+
+/*edit post textarea */
+#edit-post-textarea {
+    border-width: 2px;
+    border-color: #dbdbdb;
+    border-radius: 2px;
+    background-color:#282828;
+    color: #c5c6c7;
+}
+
+#edit-post-textarea:focus {
+    box-shadow: none;
+    border-color: #81898C;
+}
+/* Pulse Grow - follow-btn */
+@-webkit-keyframes follow-btn {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes follow-btn{
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+/* follow button */
+.follow-btn {
+    font-weight: bold;
+    color: rgba(29,161,242,1.00);
+    background-color: #1a1a1d;
+    border: 1px solid rgba(29,161,242,1.00);
+    border-radius: 200px;
+
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.follow-btn:hover, .follow-btn:focus, .follow-btn:active {
+  transition: all 400ms ease;
+  padding:5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color:white;
+  background-color: rgba(29,161,242,1.00);
+ border:1px solid rgba(29,161,242,1.00);
+ border-radius: 200px;
+
+ -webkit-animation-name: follow-btn;
+  animation-name: follow-btn;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Pulse Grow - following-btn */
+@-webkit-keyframes following-btn {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes following-btn{
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+/* following button */
+.following-btn {
+    font-weight: bold;
+    color: white;
+    background-color: rgba(29,161,242,1.00);
+    border: transparent;
+    border-radius: 200px;
+
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.following-btn:hover, .follow-btn:focus, .follow-btn:active  {
+  color:white;
+  -webkit-animation-name: following-btn;
+   animation-name: following-btn;
+   -webkit-animation-duration: 0.3s;
+   animation-duration: 0.3s;
+   -webkit-animation-timing-function: linear;
+   animation-timing-function: linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+   animation-direction: alternate;
+}
+/* PAGINATION */
+.page-link {
+    color: rgba(29,161,242,1.00);
+    font-size: 19px;
+    font-weight: bold;
+}
+/* page - to - */
+.current {
+    color: #606770;
+}
+.current:hover {
+    background: white;
+    color: #606770;
+    cursor: default;
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        -ms-flex: 0 0 28.5%;
+        flex: 0 0 28.5%;
+        max-width: 28.5%;
+    }
+}
+
+.login-btn {
+    font-weight: bold;
+    color: white;
+    background-color: rgba(29,161,242,1.00);
+    border: transparent;
+    border-radius: 999px;
+}
+
+.login-btn:hover {
+    color: white;
+    background-color: #096AF7;
+}
+
+.register-btn {
+    font-weight: bold;
+    color: white;
+    background-color: rgba(29,161,242,1.00);
+    border: transparent;
+    border-radius: 999px;
+}
+
+.register-btn:hover {
+    color: white;
+    background-color: #096AF7;
+}
+
+.form-group.login-form-group {
+    background-color: white!important;
+}
+
+/* LOGIN AREA */
+.login-area {
+    background-color:#1f2833 ;
+    color: white;
+    border: 2px solid #81898C;
+    border-radius: 0;
+    height: inherit;
+}
+
+.login-area:focus {
+  background-color:#1f2833 ;
+  color: white;
+  border: 2px solid #81898C;
+    outline: 0px;
+    box-shadow: none;
+}
+
+.login-title {
+    font-size: 22px;
+}
+.register-title {
+    font-size: 22px;
+}
+.logintext-sz {
+    font-size: 14px;
+}
+
+.right-grey {
+    background-color: rgb(245, 248, 250);
+}
+
+.right-subcomponent {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px;
+    height: 100px;
+    border-bottom: 1px solid rgb(232, 236, 238);
+}
+
+.right-text {
+   position: relative;
+   top: 50%;
+}
+
+/* edit button */
+.edit-btn {
+  height: 35px;
+  width: 80px;
+  background-color:#1f2833;
+  color:#33B2FF;
+  border:1px solid #33B2FF;
+   border-radius: 1000px;
+  border-color: #33B2FF;
+}
+
+.edit-btn:hover {
+    background-color: #33B2FF;
+    color:white;
+}
+
+/* Like button hover*/
+.post-btn:hover{
+  transition: all 500ms ease;
+    background-color: #FF5833;
+    color: white;
+}
+/* Like button */
+.post-btn{
+  height: 35px;
+  width: 120px;
+  background-color: #1f2833;
+  color: #FF5833;
+  border:1px solid #FF5833;
+  border-radius: 1000px;
+}
+
+.btn {
+    border: none;
+}
+.btn:focus {
+    outline: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.T{
+  background-color: #1a1a1d;
+  color: #c5c6c7;
+  border:none;
+}
+/* posted */
+.post-text{
+  color: white;
+  background-color: #1f2833;
+}
+
+/* BLUE-BLACK */
+.BB{
+  background-color:#1f2833 ;
+  color: #c5c6c7;
+}
+/* BLACK */
+.LB{
+  background-color: #1a1a1d;
+}
+.borderc{
+  background-color:#81898C;
+}
+.white{
+  color:white;
+}
+/* textarea */
+.TA{
+  background-color: #1a1a1d ;
+  font-color:white;
+}

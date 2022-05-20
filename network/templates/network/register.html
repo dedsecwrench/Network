@@ -1,0 +1,36 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <div class="text-center LB" style="padding: 20px 70px; ">
+        <div style="font-size: 37px; color: rgba(29,161,242,1.00);"><i class="mr-4 fab fa-twitter"></i></div>
+        <div class="register-title mb-3 mt-4"><strong style="color: rgba(29,161,242,1.00);">Create Your Accoun</strong></div>
+        {% if message %}
+            <div>{{ message }}</div>
+        {% endif %}
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group text-left login-form-group" style="display: inline-block; width: 49.55%;">
+                <input class="form-control login-area BB" autofocus type="text" name="first_name" placeholder="Firstname"  id="register-firstname">
+            </div>
+            <div class="form-group text-left login-form-group" style="display: inline-block;  width: 49.55%">
+                <input class="form-control login-area BB" type="text" name="last_name" placeholder="Lastname" id="register-lastname">
+            </div>
+            <div class="form-group text-left login-form-group">
+                <input class="form-control login-area BB" type="text" name="username" placeholder="Username" id="register-username">
+            </div>
+            <div class="form-group text-left login-form-group">
+                <input class="form-control login-area BB" type="email" name="email" placeholder="Email" id="register-email">
+            </div>
+            <div class="form-group text-left login-form-group" >
+                <input class="form-control login-area BB" type="password" name="password" placeholder="Password" id="register-password">
+            </div>
+            <div class="form-group text-left login-form-group" >
+                <input class="form-control login-area BB" type="password" name="confirmation" placeholder="Confirm Password" id="confirm-password">
+            </div>
+            <input style="width: 100%; height: 45px" class="btn register-btn" type="submit" value="Register">
+        </form>
+        <div class="mt-4 login-sz white">
+            Already have an account? <a style="color: rgba(29,161,242,1.00);" href="{% url 'login' %}">Log In here.</a>
+        </div>
+    </div>
+{% endblock %}
